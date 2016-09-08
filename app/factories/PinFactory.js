@@ -1,5 +1,5 @@
 "use strict";
-// Still need valid firebase URLs for each promise
+// Get pins to populate a users board
 app.factory("PinStorage", ($q, $http, FirebaseURL) => {
   let getUserPins = (user) => {
     let pins = [];
@@ -21,7 +21,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
       });
     });
   };
-
+// Get a single pin
   let getSinglePin = (pinId) => {
     return $q( (resolve, reject) => {
       $http.get(`${FirebaseURL}pins/${pinId}.json`)
@@ -33,7 +33,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
       });
     });
   };
-
+// Edit a pin
   let updatePin = (pinId, editedPin) => {
     return $q( (resolve, reject) => {
       $http.patch(`${FirebaseURL}pins/${pinId}.json`,
@@ -46,7 +46,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
       });
     });
   };
-
+// Add new pin to board
   let postNewPin = (newPin) => {
     return $q( (resolve, reject) => {
       $http.post(`${FirebaseURL}/pins.json`,
@@ -59,7 +59,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
         });
     });
   };
-
+// Delete pin from board
   let deletePin = (pinId) => {
     return $q( (resolve, reject) => {
       $http.delete(`${FirebaseURL}/pins/${pinId}.json`)
