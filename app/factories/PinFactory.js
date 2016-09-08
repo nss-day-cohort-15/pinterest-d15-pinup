@@ -4,7 +4,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
   let getUserPins = (user) => {
     let pins = [];
     return $q((resolve, reject)=>{
-      $http.get('${FirebaseURL}')
+      $http.get('${FirebaseURL}/pins.json?orderBy="uid"&equalTo="${user}"')
       .success((pinObject)=>{
         if (pinObject !== null){
           Object.keys(pinObject).forEach((key)=>{
@@ -24,7 +24,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
 
   let getSinglePin = (pinId) => {
     return $q( (resolve, reject) => {
-      $http.get(`${FirebaseURL}`)
+      $http.get(`${FirebaseURL}pins/${pinId}.json`)
       .success( (pinObject) => {
         resolve(pinObject);
       })
@@ -36,7 +36,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
 
   let updatePin = (pinId, editedPin) => {
     return $q( (resolve, reject) => {
-      $http.patch(`${FirebaseURL}`,
+      $http.patch(`${FirebaseURL}pins/${pinId}.json`,
         JSON.stringify(editedPin))
       .success( (pinFromFirebase) => {
         resolve(pinFromFirebase);
@@ -49,7 +49,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
 
   let postNewPin = (newPin) => {
     return $q( (resolve, reject) => {
-      $http.post(`${FirebaseURL}`,
+      $http.post(`${FirebaseURL}/pins.json`,
         JSON.stringify(newPin))
         .success( (pinFromFirebase) => {
           resolve(pinFromFirebase);
@@ -62,7 +62,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
 
   let deletePin = (pinId) => {
     return $q( (resolve, reject) => {
-      $http.delete(`${FirebaseURL}`)
+      $http.delete(`${FirebaseURL}/pins/${pinId}.json`)
       .success( (pinFromFirebase) => {
         resolve(pinFromFirebase);
       });
