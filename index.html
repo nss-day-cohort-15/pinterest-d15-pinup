@@ -4,18 +4,30 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>pinUp</title>
-    <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
-  <body>
-    <h1>pinUp<small> Group Project</small></h1>
+
+   <!-- Root Element of PinUp App -->
+  <body ng-app="PinUp">
+
+<!--Top level contoller. Gives all child controllers access to elements on its scope -->
+<!-- ng-controller="TopCtrl" -->
+      <div ng-include="'partials/navbar.html'"></div>
+        <div class="row">
+          <div class="col s10 offset-s1 grey lighten-3 mainCol">
+
+          </div>
+        </div>
+
 
 
 
 
     <!-- 3rd party libs -->
     <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js">
+    <script type="text/javascript" src="lib/bower_components/materialize/dist/js/materialize.min.js">
     </script>
     <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
