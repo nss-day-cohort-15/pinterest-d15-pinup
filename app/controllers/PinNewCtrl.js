@@ -1,6 +1,6 @@
 "use strict";
 
-app.controller("PinNewCtrl", function($scope, $location, PinStorage) {
+app.controller("PinNewCtrl", function($scope, $window, PinStorage) {
   $scope.title = "Create a New Pin";
   $scope.btnText = "Save New Pin";
 
@@ -15,7 +15,7 @@ app.controller("PinNewCtrl", function($scope, $location, PinStorage) {
   $scope.addNewPin = function() {
     PinStorage.postNewPin ($scope.newPin)
     .then(function() {
-      $location.url("__tbd__"); // rerouting back to list view after promise is returned
+      $window.location.href = "#/boards/home"; // rerouting back to list view after promise is returned
     });
   };
 
