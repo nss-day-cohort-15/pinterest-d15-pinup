@@ -11,15 +11,15 @@
 
    <!-- Root Element of PinUp App -->
   <body ng-app="PinUp">
-
-<!--Top level contoller. Gives all child controllers access to elements on its scope -->
-<!-- ng-controller="TopCtrl" -->
+    <div ng-controller="TopCtrl">
       <div ng-include="'partials/navbar.html'"></div>
-        <div class="row">
+        <div class="row mainRow">
           <div class="col s10 offset-s1 grey lighten-3 mainCol">
+          <div ng-view></div>
 
           </div>
         </div>
+      </div>
 
 
 
@@ -35,8 +35,23 @@
     <!-- App specific files -->
     <script type="text/javascript" src="app/app.js"></script>
     <!-- providers -->
+    <script type="text/javascript" src="app/values/fb-creds.js"></script>
+    <script type="text/javascript" src="app/factories/AuthFactory.js"></script>
+    <script type="text/javascript" src="app/factories/FilterFactory.js"></script>
+    <script type="text/javascript" src="app/factories/PinFactory.js"></script>
 
     <!-- controllers -->
+    <script type="text/javascript" src="app/controllers/NavCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/TopCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/LoginCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/BoardEditCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/BoardListCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/BoardNewCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/BoardViewCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/PinEditCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/PinListCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/PinNewCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/PinViewCtrl.js"></script>
 
   </body>
 </html>
