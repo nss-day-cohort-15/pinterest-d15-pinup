@@ -24,22 +24,22 @@ app.config(function($routeProvider) {
       controller: 'LoginCtrl'
       // resolve: {isAuth}
     }).
-    // when('/items/list', {
-    //   templateUrl: 'partials/item-list.html',
-    //   controller: 'ItemListCtrl',
-    //   resolve: {isAuth}
-    // }).
+    when('/pins/newpin', {
+      templateUrl: 'partials/new-pin.html',
+      controller: 'PinNewCtrl'
+      // resolve: {isAuth}
+    }).
     // when('/items/new', {
     //   templateUrl: 'partials/item-form.html',
     //   controller: 'ItemNewCtrl',
     //   resolve: {isAuth}
     // }).
-    // when('/items/view/:itemId', {
-    //   templateUrl: 'partials/item-details.html',
-    //   controller: 'ItemViewCtrl',
-    //   resolve: {isAuth}
+    when('/pins/newpin/', {
+      templateUrl: 'partials/single-pin.html',
+      controller: 'PinViewCtrl',
+      // resolve: {isAuth}
 
-    // }).
+    }).
     // when('/items/view/:itemId/edit', {
     //   templateUrl: 'partials/item-form.html',
     //   controller: 'ItemEditCtrl',
