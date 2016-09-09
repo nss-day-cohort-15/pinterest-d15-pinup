@@ -1,0 +1,15 @@
+<h1>{{board.title}}</h1>
+  <div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <div class="">{{pin.title}}</div>
+        <div class="">{{pin.image}}</div>
+        <div class="">{{pin.description}}</div>
+        <div class=""><button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button></div>
+      </div>
+    </div>
+  </div>
+
+<!-- Commented out -->
+<!-- line 2 <div ng-repeat="pin in pins | filter: {pin: searchText.search}"> -->
+<!-- line 6 <div class=""><a ng-href="#/pins/view/{{pin.id}}">{{pin.image}}</a></div> -->
