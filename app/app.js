@@ -24,11 +24,11 @@ app.config(function($routeProvider) {
       controller: 'LoginCtrl'
       // resolve: {isAuth}
     }).
-    // when('/items/list', {
-    //   templateUrl: 'partials/item-list.html',
-    //   controller: 'ItemListCtrl',
+    when('/boards', {
+      templateUrl: 'partials/boardView.html',
+      controller: 'BoardViewCtrl',
     //   resolve: {isAuth}
-    // }).
+    }).
     // when('/items/new', {
     //   templateUrl: 'partials/item-form.html',
     //   controller: 'ItemNewCtrl',
