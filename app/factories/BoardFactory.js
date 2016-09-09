@@ -4,7 +4,7 @@ app.factory("BoardStorage", ($q, $http, FirebaseURL) => {
   let getUserBoards = (user) => {
     let boards = [];
     return $q((resolve, reject)=>{
-      $http.get('${FirebaseURL}/boards.json?orderBy="uid"&equalTo="${user}"')
+      $http.get('${FirebaseURL}boards.json?orderBy="uid"&equalTo="${user}"')
       .success((boardObject)=>{
         if (boardObject !== null){
           Object.keys(boardObject).forEach((key)=>{
@@ -49,7 +49,7 @@ app.factory("BoardStorage", ($q, $http, FirebaseURL) => {
 // Add new board to board
   let postNewBoard = (newBoard) => {
     return $q( (resolve, reject) => {
-      $http.post(`${FirebaseURL}/boards.json`,
+      $http.post(`${FirebaseURL}boards.json`,
         JSON.stringify(newBoard))
         .success( (boardFromFirebase) => {
           resolve(boardFromFirebase);
