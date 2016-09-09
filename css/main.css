@@ -1,4 +1,36 @@
+.mainRow {
+  height: 86vh; }
+
 .mainCol {
-  height: 500px; }
+  height: 100%;
+  overflow: scroll; }
+
+.addBoardCardWrapper {
+  height: 270px; }
+
+.addBoardCard {
+  height: 250px;
+  padding: 20px 12px; }
+
+.addBoardButtonWrapper {
+  margin-top: 50px;
+  margin-left: 40%; }
+
+.BoardCardWrapper {
+  height: 270px; }
+
+.BoardCard {
+  height: 250px;
+  padding: 8px 8px; }
+
+.cardImgWrapper {
+  height: 70%; }
+
+.singlePinWrapper {
+  height: 575px; }
+
+.pinCard {
+  height: 550px;
+  padding: 8px 8px; }
 
 /*# sourceMappingURL=main.css.map */
