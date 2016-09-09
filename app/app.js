@@ -24,6 +24,22 @@ app.config(function($routeProvider) {
       controller: 'LoginCtrl'
       // resolve: {isAuth}
     }).
+
+    when('/pins/newpin', {
+      templateUrl: 'partials/new-pin.html',
+      controller: 'PinNewCtrl'
+      // resolve: {isAuth}
+    }).
+    // when('/items/new', {
+    //   templateUrl: 'partials/item-form.html',
+    //   controller: 'ItemNewCtrl',
+    //   resolve: {isAuth}
+    // }).
+    when('/pins/pinView/', {
+      templateUrl: 'partials/single-pin.html',
+      controller: 'PinViewCtrl',
+      // resolve: {isAuth}
+    }).
     // when('/board/{{board.title}}', {
     //   templateUrl: 'partials/single-board.html',
     //   controller: 'BoardViewCtrl',

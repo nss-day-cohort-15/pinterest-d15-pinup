@@ -26,4 +26,11 @@
 .cardImgWrapper {
   height: 70%; }
 
+.singlePinWrapper {
+  height: 575px; }
+
+.pinCard {
+  height: 550px;
+  padding: 8px 8px; }
+
 /*# sourceMappingURL=main.css.map */
