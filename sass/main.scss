@@ -1,3 +1,46 @@
-.mainCol {
-  height: 500px
+//index.html styles
+
+.mainRow {
+  height: 86vh;
 }
+.mainCol {
+  height: 100%;
+  overflow: scroll;
+}
+
+
+//boardView.html styles
+
+.addBoardCardWrapper {
+  height: 270px;
+}
+
+.addBoardCard {
+  height: 250px;
+  padding: 20px 12px;
+}
+
+.addBoardButtonWrapper {
+  margin-top: 50px;
+  margin-left: 40%;
+}
+
+.BoardCardWrapper {
+  height: 270px;
+}
+
+.BoardCard {
+  height: 250px;
+  padding: 8px 8px;
+}
+
+.cardImgWrapper {
+  height: 70%;
+}
+
+
+
+
+
+
+

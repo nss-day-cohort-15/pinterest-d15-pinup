@@ -24,6 +24,7 @@ app.config(function($routeProvider) {
       controller: 'LoginCtrl'
       // resolve: {isAuth}
     }).
+
     when('/pins/newpin', {
       templateUrl: 'partials/new-pin.html',
       controller: 'PinNewCtrl'
@@ -34,12 +35,27 @@ app.config(function($routeProvider) {
     //   controller: 'ItemNewCtrl',
     //   resolve: {isAuth}
     // }).
-    when('/pins/newpin/', {
+    when('/pins/pinView/', {
       templateUrl: 'partials/single-pin.html',
       controller: 'PinViewCtrl',
       // resolve: {isAuth}
-
     }).
+    // when('/board/{{board.title}}', {
+    //   templateUrl: 'partials/single-board.html',
+    //   controller: 'BoardViewCtrl',
+    //   resolve: {isAuth}
+    // }).
+    when('/boards', {
+      templateUrl: '/partials/board-list.html',
+      controller: 'BoardListCtrl',
+    //   resolve: {isAuth}
+    }).
+    // when('/items/view/:itemId', {
+    //   templateUrl: 'partials/item-details.html',
+    //   controller: 'ItemViewCtrl',
+    //   resolve: {isAuth}
+
+    // }).
     // when('/items/view/:itemId/edit', {
     //   templateUrl: 'partials/item-form.html',
     //   controller: 'ItemEditCtrl',

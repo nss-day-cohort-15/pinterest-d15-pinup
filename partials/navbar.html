@@ -1,21 +1,31 @@
-<div class="navbar-fixed">
+<!-- nav container + controller ref -->
+<div class="navbar-fixed" ng-controller="NavCtrl">
+
+<!-- dropdown content-->
+  <ul id="dropdown1" class="dropdown-content">
+    <li><a href="">one</a></li>
+    <li><a href="">two</a></li>
+    <li><a ng-href="#/boards">Boards</a></li>
+  </ul>
+
+<!-- nav bar -->
   <nav>
     <div class="nav-wrapper">
         <div class="row">
-          <div class="col s1">
+          <div class="col s1"> <!-- logo -->
             Logo
           </div>
-          <div class="col s1">
+          <div class="col s1"> <!-- search bar label, search bar -->
             <label for="search"><i class="material-icons">search</i>
             </label>
           </div>
           <div class="col s5">
             <input id="search" type="search" required>
           </div>
-          <div class="col s2">
-            Dropdown
+          <div class="col s2"> <!-- drop down -->
+            <a class="dropdown-button" href="#!" data-activates="dropdown1"><i class="material-icons right">toc</i></a>
           </div>
-          <div class="col s2">
+          <div class="col s2"> <!-- user cp -->
             User Ctrl
           </div>
         </div>
