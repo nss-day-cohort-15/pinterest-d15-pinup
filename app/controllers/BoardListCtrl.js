@@ -1,12 +1,17 @@
 "use strict";
 
-app.controller("BoardListCtrl", function($scope) {  //<- BoardStorage
+app.controller("BoardListCtrl", function($scope, $window, BoardStorage) {
 
-  // let user = $scope.$parent.getUser();
+$scope.lolnewboard = function () {
+  $window.location.href = "#/boards/new";
+};
 
-  // BoardStorage.getUserBoard(user)
-  //   .then((__itemCollectionArray__) => {
-  //     $scope.boards = __itemCollectionArray__;
-  // });
+  let user = $scope.$parent.getUser();
+
+  BoardStorage.getUserBoards(user)
+    .then((boardListArray) => {
+      console.log(boardListArray);
+      $scope.boards = boardListArray;
+  });
 
 });
