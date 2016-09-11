@@ -4,7 +4,7 @@ app.factory("PinStorage", ($q, $http, FirebaseURL) => {
   let getUserPins = (user) => {
     let pins = [];
     return $q((resolve, reject)=>{
-      $http.get('${FirebaseURL}/pins.json?orderBy="uid"&equalTo="${user}"')
+      $http.get(`${FirebaseURL}/pins.json?orderBy="uid"&equalTo="${user}"`)
       .success((pinObject)=>{
         if (pinObject !== null){
           Object.keys(pinObject).forEach((key)=>{

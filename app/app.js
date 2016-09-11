@@ -3,6 +3,9 @@
 var app = angular.module("PinUp", ["ngRoute"])
 .constant("FirebaseURL", "https://pinup-7471d.firebaseio.com/");
 
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
 
 let isAuth = (AuthFactory) => new Promise((resolve, reject) =>{
   if(AuthFactory.isAuthenticated()) {
@@ -40,11 +43,6 @@ app.config(function($routeProvider) {
       controller: 'PinViewCtrl'
       // resolve: {isAuth}
     }).
-    when('/boards/single', {
-      templateUrl: 'partials/single-board.html',
-      controller: 'BoardViewCtrl',
-    //   resolve: {isAuth}
-    }).
     when('/boards/home', {
       templateUrl: '/partials/board-list.html',
       controller: 'BoardListCtrl'
@@ -53,6 +51,12 @@ app.config(function($routeProvider) {
     when('/boards/new', {
       templateUrl: '/partials/new-board.html',
       controller: 'BoardNewCtrl'
+    //   resolve: {isAuth}
+    }).
+    //boardID stored in $routeParams
+    when('/boards/:boardid', {
+      templateUrl: 'partials/single-board.html',
+      controller: 'BoardViewCtrl',
     //   resolve: {isAuth}
     }).
 

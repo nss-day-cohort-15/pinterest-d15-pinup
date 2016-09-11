@@ -1,4 +1,12 @@
 //index.html styles
+#navbar {
+  background-color: #ffcc80;
+}
+
+.logoImg {
+  height: 60px;
+  margin-top: 4px;
+}
 
 .mainRow {
   height: 86vh;
@@ -9,7 +17,7 @@
 }
 
 
-//boardView.html styles
+//board-list.html styles
 
 .addBoardCardWrapper {
   height: 270px;
@@ -32,8 +40,38 @@
 .BoardCard {
   height: 250px;
   padding: 8px 8px;
+  cursor: pointer;
 }
 
+
+
+//single-board.html styles
+
+.pinRow {
+  height: 75vh;
+}
+
+.pinCol {
+  height: 100%;
+}
+
+.imgDiv img {
+  width: 100%;
+  max-height: 400px;
+}
+
+.pinWrapper {
+  padding: 8px;
+}
+
+
+.deletepinbtn {
+  background-color: #84CAB3;
+}
+
+
+
+//dunno
 .cardImgWrapper {
   height: 70%;
 }
@@ -46,7 +84,6 @@
   height: 550px;
   padding: 8px 8px;
 }
-
 
 
 
