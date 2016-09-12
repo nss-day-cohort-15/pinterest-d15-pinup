@@ -1,15 +1,17 @@
 "use strict";
 
 app.controller("BoardEditCtrl", function($scope, $location, $routeParams, BoardStorage ) {
-  $scope.title = "Edit Board";
-  $scope.btnText = "Save Changes";
-  $scope.newBoard = {};
 
+  BoardStorage.getSingleBoard($routeParams.boardeditid)
+  .then( (response) => {
+    $scope.newBoard = response;
+    $scope.header = $scope.newBoard.title;
+  });
 
   $scope.addNewBoard = () => {
-    BoardStorage.updateBoard($routeParams.boardId, $scope.newBoard)
+    BoardStorage.updateBoard($routeParams.boardeditid, $scope.newBoard)
     .then( (response) => {
-      $location.url("__tbd__");
+      $location.url('/boards/home');
     });
   };
 

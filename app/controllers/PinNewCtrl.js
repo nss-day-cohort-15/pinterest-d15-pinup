@@ -29,8 +29,6 @@ app.controller("PinNewCtrl", function($scope, $window, PinStorage, BoardStorage)
     uid: user
   };
 
-
-
   //get all user's boards for the select dropdown
   BoardStorage.getUserBoards(user)
   .then((boardListArray) => {
@@ -41,13 +39,6 @@ app.controller("PinNewCtrl", function($scope, $window, PinStorage, BoardStorage)
         $('select').material_select();
     });
   });
-
-  //has to change twice?
-  // $('#boardSelector').change( function () {
-  //   // $scope.newPin.boardid = $scope.selectedBoard;
-  //   console.log($scope.newPin);
-  // });
-
 
   //take the $scope.newPin object and pass it as an argument to the postNewPin function in PinFactory.js
   $scope.addNewPin = function() {

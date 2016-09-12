@@ -1,5 +1,6 @@
 <h1 class="center-align">{{currentBoardTitle}}</h1>
 
+<!-- first pin column -->
 <div class="row pinRow">
   <div class="col s4 pinCol">
     <div class="card pinWrapper" ng-repeat="pin in boardPinsCol1">
@@ -16,6 +17,7 @@
     </div>
   </div>
 
+<!-- second pin column -->
   <div class="col s4 pinCol">
     <div class="card pinWrapper" ng-repeat="pin in boardPinsCol2">
       <div class="imgDiv">
@@ -31,7 +33,7 @@
     </div>
   </div>
 
-
+<!-- third pin column -->
   <div class="col s4 pinCol">
     <div class="card pinWrapper" ng-repeat="pin in boardPinsCol3">
       <div class="imgDiv">
@@ -53,6 +55,6 @@
 
 
 <!-- Commented out -->
-<!-- line 2 <div ng-repeat="pin in pins | filter: {pin: searchText.search}"> -->
-<!-- line 6 <div class=""><a ng-href="#/pins/view/{{pin.id}}">{{pin.image}}</a></div> -->
+ <!-- <div ng-repeat="pin in pins | filter: {pin: searchText.search}"> -->
+ <!-- <div class=""><a ng-href="#/pins/view/{{pin.id}}">{{pin.image}}</a></div> -->
  <!-- | filter: {pin: searchText.search} -->

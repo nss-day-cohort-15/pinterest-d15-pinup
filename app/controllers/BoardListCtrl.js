@@ -20,6 +20,12 @@ app.controller("BoardListCtrl", function($scope, $window, $routeParams, BoardSto
     $window.location.href = "#/boards/new";
   };
 
+  $scope.boardEdit = function (boardid) {
+
+    $window.location.href = `#/boards/edit/${boardid}`;
+  };
+
+
   //delete a board using ng-click and the board id being passed in via the
   //data attr in the partial
   $scope.boardDelete = function (boardid) {
@@ -31,7 +37,6 @@ app.controller("BoardListCtrl", function($scope, $window, $routeParams, BoardSto
       .then((boardListArray) => {
         $scope.boards = boardListArray;
       });
-
     });
 
   };
@@ -41,7 +46,6 @@ app.controller("BoardListCtrl", function($scope, $window, $routeParams, BoardSto
   $scope.goToBoard = function (boardid, boardtitle) {
     $scope.$parent.currentBoardId = boardid;
     $scope.$parent.currentBoardTitle = boardtitle;
-    $routeParams.boardid = boardid;
     $window.location.href = `#/boards/${boardid}`;
   };
 
