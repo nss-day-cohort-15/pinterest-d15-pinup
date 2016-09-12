@@ -3,9 +3,9 @@
 <!-- first pin column -->
 <div class="row pinRow">
   <div class="col s4 pinCol">
-    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol1">
+    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol1" mbox>
       <div class="imgDiv">
-        <img class="materialboxed" src="{{pin.image}}">
+        <img class="materialboxed" src="{{pin.image}}" data-caption="{{pin.description}}">
       </div>
       <div class="pinTextWrapper grey lighten-4">
         <span>{{pin.title}}</span><br>
@@ -19,9 +19,9 @@
 
 <!-- second pin column -->
   <div class="col s4 pinCol">
-    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol2">
+    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol2" mbox>
       <div class="imgDiv">
-        <img class="materialboxed" src="{{pin.image}}">
+        <img class="materialboxed" src="{{pin.image}}" data-caption="{{pin.description}}">
       </div>
       <div class="pinTextWrapper grey lighten-4">
         <span>{{pin.title}}</span><br>
@@ -35,9 +35,9 @@
 
 <!-- third pin column -->
   <div class="col s4 pinCol">
-    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol3">
+    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol3" mbox>
       <div class="imgDiv">
-        <img class="materialboxed" src="{{pin.image}}">
+        <img class="materialboxed" src="{{pin.image}}" data-caption="{{pin.description}}">
       </div>
        <div class="pinTextWrapper grey lighten-4">
         <span>{{pin.title}}</span><br>
