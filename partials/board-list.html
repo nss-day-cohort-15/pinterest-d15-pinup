@@ -20,13 +20,14 @@
     <div class="col s6 m4 BoardCardWrapper"><!-- board card wrapper -->
       <div class="card BoardCard"><!-- board card -->
         <div class="cardImgWrapper orange lighten-5" ng-click="goToBoard(board.id, board.title)" data-boardid="{{board.id}}"><!-- img wrapper -->
-          <span>Img goes here</span>
+          <img src="{{board.image}}">
         </div><!-- end img wrapper -->
         <div class="cardBottomWrapper grey lighten-4"><!-- card bottom wrapper, for title and edit link -->
           <span>{{board.title}}</span>
           <span class="boardDescSpan">{{board.description}}</span>
           <div class="deleteBoardbtn">
             <button class="btn btn-danger" ng-click="boardDelete(board.id)">X</button>
+            <button class="btn btn-danger" ng-click="boardEdit(board.id)"><i class="material-icons">mode_edit</i></button>
           </div>
 
         </div><!-- end card bottom wrapper -->
