@@ -5,14 +5,12 @@ app.factory("BoardStorage", ($q, $http, FirebaseURL) => {
     let boards = [];
     return $q((resolve, reject)=>{
       $http.get(`${FirebaseURL}/boards.json?orderBy="uid"&equalTo="${user}"`)
-      .success((boardObject)=>{
-        console.log("boardobj", boardObject);
+      .success((boardObject) => {
         if (boardObject !== null) {
           Object.keys(boardObject).forEach((key)=>{
             boardObject[key].id = key;
             boards.push(boardObject[key]);
           });
-          console.log("boards", boards);
           resolve(boards);
         } else {
           resolve(boards);
