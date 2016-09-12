@@ -3,7 +3,7 @@
 <!-- first pin column -->
 <div class="row pinRow">
   <div class="col s4 pinCol">
-    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol1" mbox>
+    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol1 | filter: searchText.search" mbox>
       <div class="imgDiv">
         <img class="materialboxed" src="{{pin.image}}" data-caption="{{pin.description}}">
       </div>
@@ -19,7 +19,7 @@
 
 <!-- second pin column -->
   <div class="col s4 pinCol">
-    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol2" mbox>
+    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol2 | filter: searchText.search" mbox>
       <div class="imgDiv">
         <img class="materialboxed" src="{{pin.image}}" data-caption="{{pin.description}}">
       </div>
@@ -35,7 +35,7 @@
 
 <!-- third pin column -->
   <div class="col s4 pinCol">
-    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol3" mbox>
+    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol3 | filter: searchText.search" mbox>
       <div class="imgDiv">
         <img class="materialboxed" src="{{pin.image}}" data-caption="{{pin.description}}">
       </div>

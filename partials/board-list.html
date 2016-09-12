@@ -16,7 +16,7 @@
 
 
 <!-- placeholder templates for board cards.  probably will use ng-repeat for these -->
-  <div ng-repeat="board in boards">
+  <div ng-repeat="board in boards | filter: searchText.search">
     <div class="col s6 m4 BoardCardWrapper"><!-- board card wrapper -->
       <div class="card BoardCard"><!-- board card -->
         <div class="cardImgWrapper orange lighten-5" ng-click="goToBoard(board.id, board.title)" data-boardid="{{board.id}}"><!-- img wrapper -->

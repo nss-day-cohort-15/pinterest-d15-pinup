@@ -1,6 +1,8 @@
 "use strict";
 
-app.controller("BoardViewCtrl", function($scope, $location, $window, $routeParams, BoardStorage, PinStorage) {
+app.controller("BoardViewCtrl", function($scope, $location, $window, $routeParams, BoardStorage, PinStorage, SearchTermData) {
+
+  $scope.searchText = SearchTermData;
 
   //array holds pins specific to this board
   $scope.boardPins = [];
