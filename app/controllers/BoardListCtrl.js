@@ -1,10 +1,12 @@
 "use strict";
 
-app.controller("BoardListCtrl", function($scope, $window, $routeParams, BoardStorage, PinStorage, FirebaseURL) {
+app.controller("BoardListCtrl", function($scope, $window, $routeParams, BoardStorage, PinStorage, SearchTermData, FirebaseURL) {
 
   //define user for use in this scope
   //comes from the logged in user's uid property
   let user = $scope.$parent.getUser();
+  $scope.searchText = SearchTermData;
+
 
   //retrieve the 'boards' with uid property equal to user
   //this populates the page via the ng-repeat being linked to 'board in boards'
