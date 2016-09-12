@@ -33,6 +33,7 @@ app.controller("TopCtrl", function($scope, $location, $window, AuthFactory){
     AuthFactory.logoutUser()
     .then(function(data){
       console.log("logged out", data);
+      $window.location.href = "/";
     });
   };
 
