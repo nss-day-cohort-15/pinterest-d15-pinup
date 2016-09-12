@@ -1,0 +1,58 @@
+<h1 class="center-align">{{currentBoardTitle}}</h1>
+
+<div class="row pinRow">
+  <div class="col s4 pinCol">
+    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol1">
+      <div class="imgDiv">
+        <img class="materialboxed" src="{{pin.image}}">
+      </div>
+      <div class="pinTextWrapper grey lighten-4">
+        <span>{{pin.title}}</span><br>
+        <span class="pinDescSpan">{{pin.description}}</span>
+        <div class="deletePinbtn">
+          <button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4 pinCol">
+    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol2">
+      <div class="imgDiv">
+        <img class="materialboxed" src="{{pin.image}}">
+      </div>
+      <div class="pinTextWrapper grey lighten-4">
+        <span>{{pin.title}}</span><br>
+        <span class="pinDescSpan">{{pin.description}}</span>
+        <div class="deletePinbtn">
+          <button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col s4 pinCol">
+    <div class="card pinWrapper" ng-repeat="pin in boardPinsCol3">
+      <div class="imgDiv">
+        <img class="materialboxed" src="{{pin.image}}">
+      </div>
+       <div class="pinTextWrapper grey lighten-4">
+        <span>{{pin.title}}</span><br>
+        <span class="pinDescSpan">{{pin.description}}</span>
+        <div class="deletePinbtn">
+          <button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+<!-- Commented out -->
+<!-- line 2 <div ng-repeat="pin in pins | filter: {pin: searchText.search}"> -->
+<!-- line 6 <div class=""><a ng-href="#/pins/view/{{pin.id}}">{{pin.image}}</a></div> -->
+ <!-- | filter: {pin: searchText.search} -->

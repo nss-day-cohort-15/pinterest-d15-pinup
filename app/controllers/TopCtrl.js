@@ -2,7 +2,14 @@
 
 app.controller("TopCtrl", function($scope, $location, $window, AuthFactory){
   $scope.isLoggedIn = false;
+  $scope.currentBoardId = "";
+  $scope.currentBoardTitle = "";
   let currentUser = null;
+
+  $(document).ready(function(){
+    $('.materialboxed').materialbox();
+  });
+
 
   firebase.auth().onAuthStateChanged(function(user){
     if (user) {

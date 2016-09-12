@@ -1,0 +1,37 @@
+<h4 class="center-align">Your boards</h4><!-- 'View Boards' Header -->
+
+<div class="row"><!-- row wrapper -->
+
+  <div class="col s6 m4 addBoardCardWrapper"><!-- 'Add Board' card wrapper -->
+
+    <div class="card addBoardCard"><!-- 'Add Board' card -->
+      <div class="addBoardButtonWrapper">
+        <span><a ng-click="lolnewboard()" class="btn-floating btn-large waves-effect waves-light red addBoardButton"><i class="material-icons">add</i></a></span><br>
+        <span class="cardCaption">Add new</span>
+      </div>
+
+    </div><!-- end 'Add Board' card -->
+  </div><!-- end 'Add Board' card wrapper -->
+
+
+
+<!-- placeholder templates for board cards.  probably will use ng-repeat for these -->
+  <div ng-repeat="board in boards">
+    <div class="col s6 m4 BoardCardWrapper"><!-- board card wrapper -->
+      <div class="card BoardCard"><!-- board card -->
+        <div class="cardImgWrapper orange lighten-5" ng-click="goToBoard(board.id, board.title)" data-boardid="{{board.id}}"><!-- img wrapper -->
+          <span>Img goes here</span>
+        </div><!-- end img wrapper -->
+        <div class="cardBottomWrapper grey lighten-4"><!-- card bottom wrapper, for title and edit link -->
+          <span>{{board.title}}</span>
+          <span class="boardDescSpan">{{board.description}}</span>
+          <div class="deleteBoardbtn">
+            <button class="btn btn-danger" ng-click="boardDelete(board.id)">X</button>
+          </div>
+
+        </div><!-- end card bottom wrapper -->
+      </div><!-- end board card -->
+    </div><!-- end board card wrapper -->
+  </div>
+
+</div><!-- end row wrapper -->
