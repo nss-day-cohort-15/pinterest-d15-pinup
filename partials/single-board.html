@@ -8,9 +8,11 @@
       </div>
       <div class="pinTextWrapper grey lighten-4">
         <span>{{pin.title}}</span><br>
-        <span>{{pin.description}}</span>
+        <span class="pinDescSpan">{{pin.description}}</span>
+        <div class="deletePinbtn">
+          <button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button>
+        </div>
       </div>
-      <div class="deletePinbtn"><button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button></div>
     </div>
   </div>
 
@@ -21,9 +23,11 @@
       </div>
       <div class="pinTextWrapper grey lighten-4">
         <span>{{pin.title}}</span><br>
-        <span>{{pin.description}}</span>
+        <span class="pinDescSpan">{{pin.description}}</span>
+        <div class="deletePinbtn">
+          <button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button>
+        </div>
       </div>
-      <div class="deletePinbtn"><button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button></div>
     </div>
   </div>
 
@@ -33,14 +37,15 @@
       <div class="imgDiv">
         <img class="materialboxed" src="{{pin.image}}">
       </div>
-      <div class="pinTextWrapper grey lighten-4">
+       <div class="pinTextWrapper grey lighten-4">
         <span>{{pin.title}}</span><br>
-        <span>{{pin.description}}</span>
+        <span class="pinDescSpan">{{pin.description}}</span>
+        <div class="deletePinbtn">
+          <button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button>
+        </div>
       </div>
-      <div class="deletePinbtn"><button class="btn btn-danger" ng-click="pinDelete(pin.id)">X</button></div>
     </div>
   </div>
-</div>
 
 
 

@@ -11,13 +11,28 @@ app.controller("BoardListCtrl", function($scope, $window, $routeParams, BoardSto
   //boards is defined here via $scope.boards
   BoardStorage.getUserBoards(user)
   .then((boardListArray) => {
-    //should have a return here
+    //should have a return here?
     $scope.boards = boardListArray;
   });
 
   //navigate to the new board partial on 'add new' button click
   $scope.lolnewboard = function () {
     $window.location.href = "#/boards/new";
+  };
+
+  //delete a board using ng-click and the board id being passed in via the
+  //data attr in the partial
+  $scope.boardDelete = function (boardid) {
+    BoardStorage.deleteBoard(boardid)
+    .then( () => {
+      //reload page
+      BoardStorage.getUserBoards(user)
+      .then((boardListArray) => {
+        $scope.boards = boardListArray;
+      });
+
+    });
+
   };
 
 //--there probably is a better way to have done this--
