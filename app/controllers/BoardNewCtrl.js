@@ -1,13 +1,14 @@
 "use strict";
 
 app.controller("BoardNewCtrl", function($scope, $window, BoardStorage) {
-  // $scope.title = "Create a New Board";
+  $scope.header = "Create a New Board";
   // $scope.btnText = "Save New Board";
 
   $scope.newBoard = {
     title: "",
     description: "",
-    uid: $scope.$parent.getUser()
+    uid: $scope.$parent.getUser(),
+    image: ""
   };
 
   $scope.addNewBoard = function() {

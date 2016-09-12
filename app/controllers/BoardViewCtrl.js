@@ -38,6 +38,9 @@ app.controller("BoardViewCtrl", function($scope, $location, $window, $routeParam
       } else if (index % 3 ===  2) {
         $scope.boardPinsCol3.push(value);
       }
+      console.log("1", $scope.boardPinsCol1);
+      console.log("2", $scope.boardPinsCol2);
+      console.log("3", $scope.boardPinsCol3);
     });
   });
 

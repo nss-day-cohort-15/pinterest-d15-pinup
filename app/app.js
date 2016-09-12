@@ -30,8 +30,8 @@ app.config(function($routeProvider) {
 
     when('/pins/newpin', {
       templateUrl: 'partials/new-pin.html',
-      controller: 'PinNewCtrl'
-      // resolve: {isAuth}
+      controller: 'PinNewCtrl',
+      resolve: {isAuth}
     }).
     // when('/items/new', {
     //   templateUrl: 'partials/item-form.html',
@@ -40,24 +40,24 @@ app.config(function($routeProvider) {
     // }).
     when('/pins/pinView/', {
       templateUrl: 'partials/single-pin.html',
-      controller: 'PinViewCtrl'
-      // resolve: {isAuth}
+      controller: 'PinViewCtrl',
+      resolve: {isAuth}
     }).
     when('/boards/home', {
       templateUrl: '/partials/board-list.html',
-      controller: 'BoardListCtrl'
-    //   resolve: {isAuth}
+      controller: 'BoardListCtrl',
+      resolve: {isAuth}
     }).
     when('/boards/new', {
       templateUrl: '/partials/new-board.html',
-      controller: 'BoardNewCtrl'
-    //   resolve: {isAuth}
+      controller: 'BoardNewCtrl',
+      resolve: {isAuth}
     }).
     //boardID stored in $routeParams
     when('/boards/:boardid', {
       templateUrl: 'partials/single-board.html',
       controller: 'BoardViewCtrl',
-    //   resolve: {isAuth}
+      resolve: {isAuth}
     }).
 
 
@@ -67,12 +67,12 @@ app.config(function($routeProvider) {
     //   resolve: {isAuth}
 
     // }).
-    // when('/items/view/:itemId/edit', {
-    //   templateUrl: 'partials/item-form.html',
-    //   controller: 'ItemEditCtrl',
-    //   resolve: {isAuth}
+    when('/boards/edit/:boardeditid/', {
+      templateUrl: 'partials/new-board.html',
+      controller: 'BoardEditCtrl',
+      resolve: {isAuth}
 
-    // }).
+    }).
     otherwise('/login');
 });
 
