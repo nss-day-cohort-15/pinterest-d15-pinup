@@ -3,9 +3,15 @@
 var app = angular.module("PinUp", ["ngRoute"])
 .constant("FirebaseURL", "https://pinup-7471d.firebaseio.com/");
 
-  $(document).ready(function(){
-    $('.materialboxed').materialbox();
-  });
+app.directive('mbox', function() {
+  return {
+      restrict: 'A',
+      // responsible for registering DOM listeners as well as updating the DOM
+      link: function() {
+          $('.materialboxed').materialbox();
+      }
+     };
+ });
 
 let isAuth = (AuthFactory) => new Promise((resolve, reject) =>{
   if(AuthFactory.isAuthenticated()) {
