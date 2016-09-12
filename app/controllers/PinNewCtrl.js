@@ -25,7 +25,7 @@ app.controller("PinNewCtrl", function($scope, $window, PinStorage, BoardStorage)
     title: "",
     description: "",
     image: "",
-    boardid: $scope.selectedBoard,
+    boardid: "",
     uid: user
   };
 
@@ -43,13 +43,16 @@ app.controller("PinNewCtrl", function($scope, $window, PinStorage, BoardStorage)
   });
 
   //has to change twice?
-  $('#boardSelector').change( function () {
-    $scope.newPin.boardid = $scope.selectedBoard;
-  });
+  // $('#boardSelector').change( function () {
+  //   // $scope.newPin.boardid = $scope.selectedBoard;
+  //   console.log($scope.newPin);
+  // });
 
 
   //take the $scope.newPin object and pass it as an argument to the postNewPin function in PinFactory.js
   $scope.addNewPin = function() {
+    $scope.newPin.boardid = $scope.selectedBoard;
+    console.log($scope.newPin);
     PinStorage.postNewPin ($scope.newPin)
     .then(function() {
       $window.location.href = "#/boards/home"; // rerouting back to list view after promise is returned

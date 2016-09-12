@@ -8,7 +8,8 @@
   background-color: #fff !important; }
 
 #dropdownIcon {
-  font-size: 4rem; }
+  font-size: 4rem;
+  color: #26a69a; }
 
 .logoImg {
   height: 60px;
@@ -90,5 +91,8 @@ input:not([type]).valid, input:not([type]):focus.valid, input[type=text].valid, 
   border-bottom: 1px solid #26a69a;
   box-shadow: 0 1px 0 0 #26a69a;
   background-color: #fff; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important; }
 
 /*# sourceMappingURL=main.css.map */

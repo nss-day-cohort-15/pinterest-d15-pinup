@@ -27,6 +27,7 @@ app.controller("BoardListCtrl", function($scope, $window, $routeParams, BoardSto
     .then( () => {
       //reload page
       BoardStorage.getUserBoards(user)
+
       .then((boardListArray) => {
         $scope.boards = boardListArray;
       });

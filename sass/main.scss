@@ -13,6 +13,7 @@
 
 #dropdownIcon {
   font-size: 4rem;
+  color: #26a69a;
 }
 
 .logoImg {
@@ -101,6 +102,7 @@
 }
 
 //-----new-pin.html styles-----
+
 .newPinSelectWrapper {
   margin: 20px auto;
 }
@@ -130,6 +132,11 @@ input:not([type]).valid, input:not([type]):focus.valid, input[type=text].valid, 
   box-shadow: 0 1px 0 0 #26a69a;
   background-color: #fff;
 }
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}
+
 
 
 
